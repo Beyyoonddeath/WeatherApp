@@ -55,7 +55,10 @@
         }
         
         this.error = '';
-        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid=08516016502decb046526536a4e913ec`)
+        /*
+         * in YOUR API_KEY you need to paste your API key from https://openweathermap.org
+        */
+        axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${this.city}&units=metric&appid={YOUR API_KEY HERE}`)
           .then(res => (this.info = res.data))
       }
     }
